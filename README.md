@@ -46,7 +46,7 @@ Relevant Documentation Chunks
 Ollama / Llama 3.1
       ↓
 Generated Support Response
-
+```
 
 ## How to Run the Project
 
@@ -59,12 +59,6 @@ Before running the project, make sure you have installed:
 - Python 3.10+
 - Git
 - Ollama
-
-You can download Ollama here:
-
-```text
-https://ollama.com
-```
 
 ---
 
@@ -113,13 +107,12 @@ Keep this terminal open while using the application.
 
 ---
 
-### 5. Download the Required Ollama Models
+### 5. Download the Required Ollama Model
 
 Open a second terminal and run:
 
 ```bash
 ollama pull llama3.1:8b
-ollama pull nomic-embed-text
 ```
 
 ---
