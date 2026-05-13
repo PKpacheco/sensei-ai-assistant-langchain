@@ -1,0 +1,14 @@
+TECHNICAL SPECIFICATIONS AND INTEGRATIONS
+-------------------------------------
+1. SYSTEM REQUIREMENTS:
+- Sensei AI Assistant is a cloud-based platform compatible with modern browsers (Chrome, Firefox, Edge, Safari).
+- Requires a stable internet connection of at least 5Mbps.
+
+2. INTEGRATIONS (APIs):
+- We offer native integration with Salesforce, HubSpot, and Slack.
+- Our REST API uses Bearer Token authentication (OAuth2).
+- The API rate limit is 100 calls per minute for the Basic Plan.
+
+3. SECURITY:
+- All data is encrypted at rest using AES-256.
+- We support Two-Factor Authentication (2FA).
