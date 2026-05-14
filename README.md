@@ -150,16 +150,3 @@ The local ChromaDB database is not included in the repository. To recreate it, r
 ```bash
 python src/database.py
 ```
-
-## Future Improvements
-
-- Add source citations
-- Add PDF and DOCX document support
-- Add confidence scoring
-- Add Docker support
-- Add more eval cases
-- Add optional cloud model support
-
-## License
-
-Portfolio project for learning and experimentation.
