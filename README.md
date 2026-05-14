@@ -1,31 +1,22 @@
 # Sensei AI Assistant
 
-Sensei AI Assistant is a local RAG-powered customer support assistant that retrieves internal documentation and generates professional draft responses for incoming customer emails.
+Sensei AI Assistant is a portfolio project built to explore practical AI engineering concepts such as RAG, local LLMs, vector search, skills, tools, guardrails, and evals.
 
-The project was built as a portfolio application to demonstrate practical AI integration using LangChain, ChromaDB, Ollama, and Streamlit.
+The app simulates a customer support assistant that reads an incoming email, retrieves relevant internal documentation, and drafts a professional response.
 
-## AI Concepts Demonstrated
+## Project Goal
 
-This project demonstrates several practical AI engineering concepts:
+The main goal of this project is learning and experimentation.
 
-- **RAG:** Retrieves relevant internal documentation before generating a response.
-- **Vector Search:** Uses ChromaDB to perform semantic search over support documents.
-- **Local LLMs:** Runs Llama 3.1 locally through Ollama.
-- **Skills:** Uses reusable instruction files to define response behavior and constraints.
-- **Tools:** Encapsulates document retrieval as a callable tool.
-- **Subagent-inspired workflow:** Separates the workflow into triage, drafting, and QA validation steps.
-- **Evals:** Includes test cases to validate response quality and reduce hallucinations.
+I built it to practice:
 
-## Features
-
-- Generates professional customer support draft replies
-- Uses Retrieval-Augmented Generation (RAG)
-- Retrieves relevant information from internal documentation
-- Runs locally with Ollama
-- Uses ChromaDB as a local vector database
-- Simple Streamlit web interface
-- Avoids relying only on the LLM's general knowledge
-- Designed to reduce hallucinations by grounding responses in documentation
+- Building a local RAG workflow     
+- Using LangChain with a vector database
+- Running a local LLM with Ollama
+- Creating reusable AI skills
+- Structuring a simple agent-inspired workflow
+- Adding guardrails for sensitive requests
+- Writing basic evals to test AI responses
 
 ## Tech Stack
 
@@ -36,122 +27,139 @@ This project demonstrates several practical AI engineering concepts:
 - Ollama
 - Llama 3.1 8B
 - Nomic Embed Text
-- dotenv
+
+## AI Concepts Included
+
+- **RAG:** retrieves documentation before generating a response
+- **Vector Search:** uses ChromaDB for semantic document search
+- **Local LLM:** runs Llama 3.1 locally through Ollama
+- **Skills:** stores reusable response instructions
+- **Tools:** separates document retrieval into a callable tool
+- **Agent-inspired workflow:** uses triage, retrieval, drafting, and QA steps
+- **Guardrails:** escalates sensitive policy requests to human review
+- **Evals:** tests classification and response behavior
 
 ## Architecture
 
 ```text
-Customer Email
+Incoming Email
       ↓
-Streamlit UI
+Policy Guard
       ↓
-LangChain Retrieval Chain
+Triage Agent
       ↓
-ChromaDB Vector Store
+Skill Selection
       ↓
-Relevant Documentation Chunks
+Retrieval Tool
       ↓
-Ollama / Llama 3.1
+ChromaDB
       ↓
-Generated Support Response
+Llama 3.1 via Ollama
+      ↓
+QA Agent
+      ↓
+Draft Response
 ```
 
-## How to Run the Project
+## Project Structure
 
-Follow the steps below to run **Sensei AI Assistant** locally.
+```text
+sensei-ai-assistant-langchain/
+├── evals/
+├── knowledge_base/
+├── skills/
+├── src/
+│   ├── agents/
+│   ├── tools/
+│   ├── app.py
+│   ├── chains.py
+│   └── database.py
+├── README.md
+└── requirements.txt
+```
 
-### Prerequisites
+## How to Run
 
-Before running the project, make sure you have installed:
-
-- Python 3.10+
-- Git
-- Ollama
-
----
-
-### 1. Clone the Repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/YOUR-USERNAME/sensei-ai-assistant-langchain.git
 cd sensei-ai-assistant-langchain
 ```
 
----
-
-### 2. Create a Virtual Environment
+### 2. Create and activate a virtual environment
 
 ```bash
 python -m venv venv
-```
-
-Activate the virtual environment:
-
-#### macOS 
-
-```bash
 source venv/bin/activate
 ```
 
----
-
-### 3. Install Python Dependencies
+### 3. Install dependencies
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
----
-
 ### 4. Start Ollama
-
-Open a terminal and run:
 
 ```bash
 ollama serve
 ```
 
-Keep this terminal open while using the application.
+Keep this terminal open.
 
----
+### 5. Pull the required models
 
-### 5. Download the Required Ollama Model
-
-Open a second terminal and run:
+Open another terminal and run:
 
 ```bash
 ollama pull llama3.1:8b
+ollama pull nomic-embed-text
 ```
 
----
-
-### 6. Generate the Local Vector Database
-
-From the project root folder, run:
+### 6. Build the local vector database
 
 ```bash
 python src/database.py
 ```
 
-This step reads the files from the `knowledge_base` folder, converts them into embeddings, and stores them locally in ChromaDB.
-
-If you change the embedding model or update the knowledge base, delete the old database and run the ingestion script again:
-
-
----
-
-### 7. Run the Streamlit App
-
-Start the application with:
+### 7. Run the app
 
 ```bash
 python -m streamlit run src/app.py
 ```
 
-Streamlit will open the app in your browser.
-
-If it does not open automatically, go to:
+The app should open at:
 
 ```text
 http://localhost:8501
 ```
+
+## Running Evals
+
+```bash
+python -m evals.run_evals
+```
+
+## Notes
+
+This project runs locally with Ollama, so no paid API key is required.
+
+The local ChromaDB database is not included in the repository. To recreate it, run:
+
+```bash
+python src/database.py
+```
+
+## Future Improvements
+
+- Add source citations
+- Add PDF and DOCX document support
+- Add confidence scoring
+- Add Docker support
+- Add more eval cases
+- Add optional cloud model support
+
+## License
+
+Portfolio project for learning and experimentation.
