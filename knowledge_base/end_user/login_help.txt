@@ -1,0 +1,9 @@
+Login Support
+
+If a customer cannot log in, ask them to confirm that they are using the correct email address.
+
+If the customer forgot their password, they should use the password reset option on the login page.
+
+If the password reset email does not arrive, ask the customer to check their spam or junk folder.
+
+If the issue continues, escalate the case to a human support agent.

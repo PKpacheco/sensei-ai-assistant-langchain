@@ -4,9 +4,17 @@ Sensei AI Assistant is a local RAG-powered customer support assistant that retri
 
 The project was built as a portfolio application to demonstrate practical AI integration using LangChain, ChromaDB, Ollama, and Streamlit.
 
-## Why "Sensei"?
+## AI Concepts Demonstrated
 
-The name "Sensei" reflects the assistant's role as a knowledgeable guide. Just like a sensei helps students find clarity, Sensei AI Assistant searches internal documentation and turns it into clear, professional support responses.
+This project demonstrates several practical AI engineering concepts:
+
+- **RAG:** Retrieves relevant internal documentation before generating a response.
+- **Vector Search:** Uses ChromaDB to perform semantic search over support documents.
+- **Local LLMs:** Runs Llama 3.1 locally through Ollama.
+- **Skills:** Uses reusable instruction files to define response behavior and constraints.
+- **Tools:** Encapsulates document retrieval as a callable tool.
+- **Subagent-inspired workflow:** Separates the workflow into triage, drafting, and QA validation steps.
+- **Evals:** Includes test cases to validate response quality and reduce hallucinations.
 
 ## Features
 

@@ -1,0 +1,15 @@
+Partner Onboarding Guide
+
+New partners begin onboarding by completing their administrative profile setup in the Partner Portal.
+
+The second step is domain and email verification, which must be completed before accessing integration features.
+
+The third step is connecting the partner's CRM system using our native integrations (Salesforce, HubSpot, or Slack).
+
+New partners are entitled to a 45-minute live training session with a Customer Success specialist.
+
+A complete video knowledge base is available in the Partner Portal for self-paced learning.
+
+Partners must complete onboarding within 14 days of account activation. After this period, access to setup wizards expires and manual configuration is required.
+
+For onboarding issues or questions, partners should contact their assigned Customer Success representative or email onboarding@senseiassistant.com.

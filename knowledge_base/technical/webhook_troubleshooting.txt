@@ -1,0 +1,25 @@
+Webhook Troubleshooting
+
+Webhooks are used to send event notifications from the platform to an external system.
+
+If a developer reports that webhooks are not being received, ask them to confirm that the webhook URL is active and publicly accessible.
+
+The webhook endpoint must accept HTTPS requests.
+
+If the developer reports failed webhook deliveries, ask them to provide the event type, timestamp, endpoint URL, and response status code.
+
+Common webhook issues include invalid URLs, expired SSL certificates, firewall restrictions, timeout errors, and non-2xx HTTP responses.
+
+If the external system returns a 401 status code, the developer should review authentication settings.
+
+If the external system returns a 403 status code, the developer should review permissions or access rules.
+
+If the external system returns a 404 status code, the developer should confirm that the webhook endpoint path is correct.
+
+If the external system returns a 500 status code, the developer should check their server logs and application error handling.
+
+Webhook requests should not include sensitive credentials in plain text.
+
+Do not ask developers to send API keys, tokens, passwords, or secrets by email.
+
+If the issue continues after basic troubleshooting, escalate the case to the technical support team.

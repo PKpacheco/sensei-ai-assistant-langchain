@@ -3,7 +3,7 @@ from src.chains import generate_smart_response
 
 # UI Configuration
 st.set_page_config(
-    page_title=" Sensei AI Assistant",
+    page_title="Sensei AI Assistant",
     layout="centered"
 )
 

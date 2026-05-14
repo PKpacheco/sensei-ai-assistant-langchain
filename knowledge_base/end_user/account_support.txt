@@ -1,0 +1,15 @@
+Account Support
+
+Customers can update their account information (name, email, phone number) through the Account Settings page.
+
+If a customer requests an email change, they must verify the new email address before the update takes effect.
+
+Account deactivation can be requested by contacting support. Once deactivated, the account data is retained for 30 days before permanent deletion.
+
+If a customer wants to reactivate a deactivated account within the 30-day window, they should contact support with their registered email address.
+
+For security reasons, account ownership transfers are not supported. If a customer needs to transfer their subscription, they must cancel and create a new account.
+
+If the customer reports unauthorized access to their account, advise them to reset their password immediately and enable Two-Factor Authentication (2FA). Escalate the case to the security team.
+
+For questions about discounts, loyalty programs, special pricing, or promotional offers, inform the customer that a human support agent will follow up to review their request. Do not confirm or deny the existence of any discount or promotion.

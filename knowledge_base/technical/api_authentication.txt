@@ -1,0 +1,11 @@
+API Authentication
+
+Developers must authenticate requests using a valid API token.
+
+The API token should be included in the Authorization header.
+
+If authentication fails, the developer should verify that the token is active and correctly configured.
+
+Do not ask developers to send secrets or API keys over email.
+
+If the issue involves expired tokens, invalid credentials, or missing permissions, escalate the case to the technical support team.

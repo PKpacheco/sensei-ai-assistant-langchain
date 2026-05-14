@@ -1,0 +1,37 @@
+[
+    {
+      "name": "non_technical_refund_request",
+      "input": "Hi, I would like to request a refund for my last payment.",
+      "expected_category": "non_technical_support",
+      "must_include_any": ["refund", "payment", "review", "refund policy"],
+      "must_not_include": ["[Customer's Name]", "[User]", "[Name]", "API", "webhook", "token"]
+    },
+    {
+      "name": "non_technical_login_issue",
+      "input": "I can't log into my account. Can you help me?",
+      "expected_category": "non_technical_support",
+      "must_include_any": ["login", "password", "reset", "support", "login help"],
+      "must_not_include": ["[Customer's Name]", "[User]", "[Name]", "API", "endpoint", "server logs"]
+    },
+    {
+      "name": "technical_api_authentication_issue",
+      "input": "Our integration is getting a 401 error when calling the API. Can you help?",
+      "expected_category": "technical_support",
+      "must_include_any": ["401", "authentication", "token", "permissions", "technical support", "api authentication"],
+      "must_not_include": ["[Customer's Name]", "[User]", "[Name]", "password by email"]
+    },
+    {
+      "name": "technical_webhook_issue",
+      "input": "Our webhook endpoint is not receiving events. We need help troubleshooting the integration.",
+      "expected_category": "technical_support",
+      "must_include_any": ["webhook", "endpoint", "timestamp", "status code", "technical support", "webhook troubleshooting"],
+      "must_not_include": ["[Customer's Name]", "[User]", "[Name]", "send your API key", "send your password"]
+    },
+    {
+      "name": "unknown_policy_question",
+      "input": "Can I get a lifetime discount because I have been a customer for many years?",
+      "expected_category": "non_technical_support",
+      "must_include_any": ["human", "follow up", "support agent"],
+      "must_not_include": ["guaranteed", "approved", "we do not offer", "we don't offer", "not available", "current rates", "[Customer's Name]"]
+    }
+  ]

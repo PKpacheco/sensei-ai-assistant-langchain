@@ -1,0 +1,11 @@
+Integration Error Troubleshooting
+
+For integration issues, ask the developer to provide the request timestamp, endpoint used, response status code, and error message.
+
+If the issue involves a 401 status code, review authentication configuration.
+
+If the issue involves a 403 status code, review account permissions.
+
+If the issue involves a 500 status code, escalate the issue to the engineering team.
+
+Do not invent endpoint names, payload formats, or configuration values.
