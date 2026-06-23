@@ -42,6 +42,55 @@ Quality-assurance check
 Draft presented for human review
 ```
 
+## Example
+
+The following example demonstrates how the application processes a simulated customer-support request.
+
+### Incoming Email
+
+```text
+Subject: Refund request
+
+Hello,
+
+I purchased the annual plan yesterday, but I selected the wrong package.
+Could you cancel the subscription and issue a refund?
+
+Thank you.
+```
+
+### Processing Steps
+
+```text
+Request category: Billing / Refund
+Policy-sensitive request: Yes
+Selected workflow: Billing Support
+Knowledge-base retrieval: Refund and cancellation policy
+Human review required: Yes
+```
+
+The application classifies the request, retrieves the most relevant internal documentation, and uses the retrieved context to prepare a response draft.
+
+Because the request involves a refund decision, the policy guard routes the draft for human review instead of treating the generated response as a final decision.
+
+### Draft Response
+
+```text
+Hello,
+
+Thank you for contacting us.
+
+I understand that you selected the wrong annual plan and would like to request a cancellation and refund. I have forwarded your request for review according to our refund and cancellation policy.
+
+A support representative will confirm your eligibility and provide the next steps.
+
+Best,
+Customer Support
+```
+
+> The example uses simulated data. Generated wording may vary because the application runs with a local language model. All responses should be reviewed before being sent to a customer.
+
+
 ## Main Features
 
 ### Email Triage
