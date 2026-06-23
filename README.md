@@ -83,7 +83,7 @@ sensei-ai-assistant-langchain/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR-USERNAME/sensei-ai-assistant-langchain.git
+git clone https://github.com/PKpacheco/sensei-ai-assistant-langchain.git
 cd sensei-ai-assistant-langchain
 ```
 
